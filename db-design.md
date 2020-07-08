@@ -86,6 +86,7 @@ belongs_to :plant
 |-    |-        |-    |-    |
 |id   |integer  |-    |-   |
 |user_id    |integer  |null:false |-   |
+|plant_id    |integer  |null:false |-   |
 |record_time  |datetime  |null:false    |投稿日時   |
 |body  |text  |null:false   |本文   |
 

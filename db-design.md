@@ -34,8 +34,8 @@
 |user_name  |string  |null:false    |名前   |
 |password  |string  |null:false   |パスワード   |
 
-has many: user_badge
-has many: plant
+- has many: user_badge
+- has many: plant
 
 ### User_badge
 |Colum      |type     |Options    |memo       |
@@ -43,11 +43,10 @@ has many: plant
 |id         |integer  |-          |-   |
 |user_id    |integer  |null:false |-   |
 |badge_id   |integer  |null:false |-   |
-|type       |string   |null:false |バッジの種類   |
 |created_at |datetime |null:false |バッジを取得した日   |
 
-belongs_to user
-belongs_to badge
+- belongs_to user
+- belongs_to badge
 
 ### Badge
 |Colum|type     |Options|memo|
@@ -55,7 +54,7 @@ belongs_to badge
 |id   |integer  |-    |-   |
 |name   |string  |null:false    |バッジの名前   |
 
-has_many user_badge
+- has_many user_badge
  
 
 
@@ -67,8 +66,8 @@ has_many user_badge
 |plant_name   |string  |null:false    |植物の名前   |
 |img  |string  |null:false   |植物の写真   |
 
-belongs_to :user
-has_many :growth_record
+- belongs_to :user
+- has_many :growth_record
 
 ### Grouth_record
 |Colum|type     |Options|memo|
@@ -79,7 +78,7 @@ has_many :growth_record
 |temp  |float  |null:false   |気温   |
 |humid  |float  |null:false   |湿度   |
 
-belongs_to :plant
+- belongs_to :plant
 
 ### Comment
 |Colum|type     |Options|memo|
@@ -90,5 +89,5 @@ belongs_to :plant
 |record_time  |datetime  |null:false    |投稿日時   |
 |body  |text  |null:false   |本文   |
 
-belongs_to :plant
-belongs_to :user
+- belongs_to :plant
+- belongs_to :user

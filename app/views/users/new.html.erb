@@ -1,7 +1,0 @@
-<p>新規登録</p>
-<%= form_with model: @user, local: true do |f| %>
-  <p>ログインID：<%= f.text_field :login_id %></p>
-  <p>username：<%= f.text_field :user_name %></p>
-  <p>pass：<%= f.text_field :password %></p>
-  <%= f.submit "送信" %>
-<% end %>

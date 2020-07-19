@@ -1,0 +1,8 @@
+<h1>植物一覧</h1>
+<% if user_signed_in? %>
+  <% @plants.each do |plant| %>
+    <p>名前：<%= plant.plant_name %> ユーザーID：<%= plant.user_id %></p>
+  <% end %>
+<% else %>
+  <p>ログインしてください</p>
+<% end %>

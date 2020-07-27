@@ -11,6 +11,7 @@
 
   <body>
   <!-- ここから -->
+  <%= link_to "ユーザー一覧", users_path %>
     <% if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       <%= link_to "トップ", plants_path %>

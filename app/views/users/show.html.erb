@@ -1,2 +1,8 @@
 <h1>ユーザー　詳細</h1>
-ユーザー名前
+<h3>メールアドレス</h3>
+<%= @user.email %><br>
+<h3> 所有している植物　</h3>
+<% @user.plants.each do |p| %>
+  <li><%= p.plant_name %></li>
+<% end %>
+

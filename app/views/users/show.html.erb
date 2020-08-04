@@ -3,6 +3,6 @@
 <%= @user.email %><br>
 <h3> 所有している植物　</h3>
 <% @user.plants.each do |p| %>
-  <li><%= p.plant_name %></li>
+  <li><%= link_to p.plant_name ,[@user,p]%></li>
 <% end %>
 

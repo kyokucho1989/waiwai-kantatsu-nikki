@@ -1,6 +1,6 @@
-<mxfile host="b21b377f-4dda-434b-84bc-8de824fb677d" modified="2020-08-01T13:39:00.327Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="v7rPLOnYX4vjSCwy2OHv" version="13.1.3">
+<mxfile host="bbc1f464-f7b5-487f-bd88-af545f7635bc" modified="2020-08-02T13:47:41.010Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.3 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="m4271TsW1NJLZXdba89U" version="13.1.3">
     <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
-        <mxGraphModel dx="666" dy="327" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="885" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -22,6 +22,8 @@
                 <mxCell id="58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;fontSize=24;" parent="1" source="49" target="21" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
+                            <mxPoint x="470" y="280"/>
+                            <mxPoint x="380" y="280"/>
                             <mxPoint x="380" y="160"/>
                         </Array>
                     </mxGeometry>
@@ -35,7 +37,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="49" value="ユーザー詳細" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=43;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=24;" parent="1" vertex="1">
-                    <mxGeometry x="460" y="120" width="230" height="160" as="geometry">
+                    <mxGeometry x="470" y="260" width="230" height="160" as="geometry">
                         <mxRectangle x="414" y="210" width="180" height="43" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>

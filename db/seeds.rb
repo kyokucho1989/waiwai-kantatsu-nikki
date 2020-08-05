@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(email: 'test@example.com', password: 'password')
-User.create(email: 'test2@example.com', password: 'password')
+User.create(email: 'test@example.com', password: 'password',nickname: 'cho')
+User.create(email: 'test2@example.com', password: 'password',nickname: 'tie')
 Plant.create(user_id:1, plant_name: "flower", img: "flower_img") 
 Plant.create(user_id:1, plant_name: "sun_flower", img: "sun_flower_img") 
 Plant.create(user_id:2, plant_name: "dia", img: "dia_img") 

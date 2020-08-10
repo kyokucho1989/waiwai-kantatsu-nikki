@@ -1,6 +1,5 @@
-<p>植物-新規登録</p>
-<%= form_with model: @plant, local: true do |f| %>
-  <p>user：<%= f.text_field :user_id %></p>
-  <p>username：<%= f.text_field :plant_name %></p>
-  <%= f.submit "送信" %>
+<h1>植物-新規登録</h1>
+<%= form_with model: @plants, local: true do |f| %>
+  <p>植物名：<%= f.text_field :plant_name %></p>
+  <%= f.submit "登録" %>
 <% end %>

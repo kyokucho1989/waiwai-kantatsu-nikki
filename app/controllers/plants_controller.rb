@@ -15,8 +15,10 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
-    Plant.create(plant_params) 
-    #binding.pry
+    binding.pry
+    current_user.plants.create(plant_params)
+    #Plant.create(plant_params) 
+    
   end
 
   def show

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_08_05_124822) do
   create_table "plants", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "plant_name", null: false
-    t.string "img", null: false
+    t.string "img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

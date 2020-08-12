@@ -5,6 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @plants = Plant.where(user_id: current_user.id)
+    #binding.pry
   end
 end

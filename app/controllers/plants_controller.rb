@@ -26,6 +26,14 @@ class PlantsController < ApplicationController
     @plant = @user.plants.find(params[:id])
   end
 
+  def destroy
+    binding.pry
+    @plant = current_user.plants.find(params[:id])
+    #binding.pry
+    @plant.destroy
+
+  end
+
   private
   def plant_params
     params.require(:plant).permit(:user_id, :plant_name, :img)

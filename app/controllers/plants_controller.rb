@@ -15,7 +15,7 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
-    binding.pry
+    #binding.pry
     current_user.plants.create(plant_params)
     #Plant.create(plant_params) 
     
@@ -24,10 +24,13 @@ class PlantsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @plant = @user.plants.find(params[:id])
+    #binding.pry
+
   end
 
   def destroy
-    binding.pry
+    #binding.pry
+    #@plant = @user.plants.find(params[:id])
     @plant = current_user.plants.find(params[:id])
     #binding.pry
     @plant.destroy

@@ -28,6 +28,17 @@ class PlantsController < ApplicationController
 
   end
 
+  def edit
+    @user = User.find(params[:user_id])
+    @plant = @user.plants.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:user_id])
+    @plant = @user.plants.find(params[:id])
+    @plant.update(plant_params)
+  end
+
   def destroy
     #binding.pry
     #@plant = @user.plants.find(params[:id])

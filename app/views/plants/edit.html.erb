@@ -1,0 +1,5 @@
+<h1>植物-編集</h1>
+<%= form_with model: [@user, @plant], local: true do |f| %>
+  <p>植物名：<%= f.text_field :plant_name %></p>
+  <%= f.submit "修正" %>
+<% end %>

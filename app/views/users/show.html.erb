@@ -14,9 +14,13 @@
 <%= @user.email %><br>
 <h3> 所有している植物　</h3>
 <% @user.plants.each do |p| %>
-  <li><%= link_to p.plant_name ,[@user,p]%>  
-  <%= link_to "編集", [:edit, @user,p] %> 
-  <%= link_to "削除", [@user,p], method: :delete, data: {confirm: "削除しますか?"} %> </li>
+  <li><%= link_to p.plant_name ,[@user,p]%> 
+  <% if user_signed_in? %>
+    <% if current_page?(user_path(current_user.id)) %> 
+      <%= link_to "編集", [:edit, @user,p] %> 
+      <%= link_to "削除", [@user,p], method: :delete, data: {confirm: "削除しますか?"} %> </li>
+    <% end %>
+  <% end %>
 <% end %>
 <% if user_signed_in? %>
   <% if current_page?(user_path(current_user.id)) %>

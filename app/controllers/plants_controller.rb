@@ -36,7 +36,8 @@ class PlantsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @plant = @user.plants.find(params[:id])
-    #binding.pry
+    @growth_record = @plant.growth_record
+    # binding.pry
 
   end
 

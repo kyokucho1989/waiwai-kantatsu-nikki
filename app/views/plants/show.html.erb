@@ -3,3 +3,8 @@
 <%= @plant.plant_name %><br>
 <h3> 植物の写真　</h3>
 <%= @plant.img %><br>
+<h3> 温度/湿度　</h3>
+
+<% @growth_record.each do |g| %>
+  <li>日時：<%= g.record_time %> / 　温度：<%= g.temp %>  /湿度：<%= g.humid %>  </li> 
+<% end %>

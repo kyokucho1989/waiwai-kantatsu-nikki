@@ -1,0 +1,6 @@
+<h1>温度湿度-新規登録</h1>
+<%= form_with model: [@user, @plant,@growth_record], local: true do |f| %>
+  <p>温度：<%= f.text_field :temp %></p>
+  <p>湿度：<%= f.text_field :humid %></p>
+  <%= f.submit "登録" %>
+<% end %>

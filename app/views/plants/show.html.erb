@@ -4,7 +4,17 @@
 <h3> 植物の写真　</h3>
 <%= @plant.img %><br>
 <h3> 温度/湿度　</h3>
+<% if user_signed_in? %>
+  <%= link_to '温度/湿度　登録' ,new_user_plant_growth_record_path(plant_id: @plant.id) %>
+<% end %>
 
 <% @growth_record.each do |g| %>
   <li>日時：<%= g.record_time %> / 　温度：<%= g.temp %>  /湿度：<%= g.humid %>  </li> 
+  <% if user_signed_in? %>
+    <% if current_page?(user_plant_path(@plant.id)) %> 
+      <%= link_to "編集", [:edit, g] %> 
+      <%= link_to "削除", g, method: :delete, data: {confirm: "削除しますか?"} %> </li>
+    <% end %>
+  <% end %>
 <% end %>
+

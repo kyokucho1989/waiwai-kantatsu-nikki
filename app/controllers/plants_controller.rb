@@ -37,7 +37,6 @@ class PlantsController < ApplicationController
     @user = User.find(params[:user_id])
     @plant = @user.plants.find(params[:id])
     @growth_record = @plant.growth_record
-    # binding.pry
 
   end
 

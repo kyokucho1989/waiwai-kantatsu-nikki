@@ -1,0 +1,6 @@
+<h1>計測記録-編集</h1>
+<%= form_with model: @growth_record, local: true do |f| %>
+  <p>温度：<%= f.text_field :temp %></p>
+  <p>湿度：<%= f.text_field :humid %></p>
+  <%= f.submit "修正" %>
+<% end %>

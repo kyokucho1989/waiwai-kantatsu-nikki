@@ -1,4 +1,7 @@
 <h1>ユーザー一覧</h1>
+サンプルユーザー：
+mail:test@example.com<br>
+pass:password<br>
 <% @users.each do |user| %>
 <p>ニックネーム <%= link_to user.nickname, user %></p>
 <% end %>

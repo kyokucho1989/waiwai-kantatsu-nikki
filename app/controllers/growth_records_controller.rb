@@ -31,7 +31,7 @@ class GrowthRecordsController < ApplicationController
     @growth_record = GrowthRecord.new(record_params)
     @plant = Plant.find(params[:plant_id])
     @plant.growth_record.create(record_params)
-    binding.pry
+    # binding.pry
   end
 
   def show
@@ -45,13 +45,13 @@ class GrowthRecordsController < ApplicationController
   def update
     @growth_record = GrowthRecord.find(params[:id])
     @growth_record.update(record_params)
-    binding.pry
+    # binding.pry
   end
 
   def destroy
     @growth_record = GrowthRecord.find(params[:id])
     @growth_record.destroy
-    binding.pry
+    # binding.pry
   end
 
   private

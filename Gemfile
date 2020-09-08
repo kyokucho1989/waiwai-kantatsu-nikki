@@ -65,3 +65,7 @@ group :development, :test do
   gem 'pry-byebug'
   # ***** 以上を追加 *****
 end
+
+# rspec
+gem 'factory_bot_rails'
+gem 'faker'

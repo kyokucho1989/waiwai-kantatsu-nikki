@@ -16,7 +16,13 @@ module WakuwakuPlant
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.generators do |g|
-      g.test_framework :rspec
+      g.test_framework :rspec,
+      fixtures: true,
+      view_specs: false,
+      routing_specs: false,
+      helper_specs: false,
+      controller_specs: false,
+      request_specs: true
     end
   end
 end

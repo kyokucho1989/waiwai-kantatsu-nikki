@@ -7,5 +7,10 @@ Rails.application.routes.draw do
       resources :growth_records, shallow: true
     end
   end
+  
+  #レスポンスのデフォルトフォーマットをJSONに変更
+  defaults format: :json do
+    resources :users
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

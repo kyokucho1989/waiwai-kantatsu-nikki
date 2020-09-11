@@ -23,7 +23,7 @@ RSpec.describe User, type: :model do
       create(:user,email:'kyokucho@example.com')
       user = build(:user,email:'kyokucho@example.com')
       user.valid?
-      binding.pry
+      # binding.pry
       expect(user.errors.messages[:email]).to include "has already been taken"
     end
   end

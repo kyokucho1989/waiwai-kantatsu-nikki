@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+
+
 RSpec.describe User, type: :model do
   context "accountを指定しているとき" do
     it "ユーザーが作られる" do
@@ -19,8 +21,11 @@ RSpec.describe User, type: :model do
   end
 
   context "同名のaccountが存在するとき" do
-    it "エラーする" do
+    before do
       create(:user,email:'kyokucho@example.com')
+    end
+    it "エラーする" do
+      
       user = build(:user,email:'kyokucho@example.com')
       user.valid?
       # binding.pry

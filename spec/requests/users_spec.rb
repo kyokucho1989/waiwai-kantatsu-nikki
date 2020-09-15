@@ -4,14 +4,17 @@ RSpec.describe "Users", type: :request do
   describe "GET /users" do
     subject { get(users_path) }
     before do
-      create_list(:user,3)
+      @users = create_list(:user,30)
+      @nickname_list = @users.map{|user| user.nickname}
     end
     it "ユーザーの一覧が取得できる" do
       subject
 
       binding.pry
-      # get users_path
-      # expect(response).to have_http_status(200)
+      @nickname_list.each do |nickname|
+        expect(response.body).to include(nickname)
+      end
+
     end
   end
 

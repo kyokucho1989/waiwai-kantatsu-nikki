@@ -10,18 +10,34 @@ RSpec.describe "Users", type: :request do
     it "ユーザーの一覧が取得できる" do
       subject
 
-      binding.pry
+      # binding.pry
       @nickname_list.each do |nickname|
         expect(response.body).to include(nickname)
       end
+      expect(response).to have_http_status(200)
 
     end
   end
 
   describe "GET /users/:id" do
-    it "任意のユーザー値が取得できる" do
-      get users_path
-      expect(response).to have_http_status(200)
+    subject { get(user_path(user_id)) }
+    context "指定したidのユーザーが存在する場合" do 
+      let(:user) { create(:user)}
+      let(:user_id) { user.id}
+      it "ユーザーの値が取得できる" do
+        subject
+        # binding.pry
+        
+        expect(response).to have_http_status(200)
+        expect(response.body).to include(user.nickname)
+        expect(response.body).to include(user.email)
+      end
+    end
+
+    context "指定したidのユーザーが存在しない場合" do 
+      it "ユーザーが見つからない" do
+
+      end
     end
   end
 

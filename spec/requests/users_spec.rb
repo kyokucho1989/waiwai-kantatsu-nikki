@@ -35,8 +35,11 @@ RSpec.describe "Users", type: :request do
     end
 
     context "指定したidのユーザーが存在しない場合" do 
+      #  binding.pry
+      let(:user_id) { 10000 }
       it "ユーザーが見つからない" do
 
+        expect { subject }.to raise_error ActiveRecord::RecordNotFound
       end
     end
   end

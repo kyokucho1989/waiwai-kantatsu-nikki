@@ -26,7 +26,7 @@ RSpec.describe "Users", type: :request do
       let(:user_id) { user.id}
       it "ユーザーの値が取得できる" do
         subject
-        # binding.pry
+        binding.pry
         
         expect(response).to have_http_status(200)
         expect(response.body).to include(user.nickname)
@@ -45,9 +45,13 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "POST /users" do
+    subject { post(users_path,params: params) }
+    let(:params){ attributes_for(:user)}
+
     it "ユーザーのレコードが作成できる" do
-      get users_path
-      expect(response).to have_http_status(200)
+      binding.pry
+      expect{subject }.to change { User.count }.by(1)
+      expect(response).to have_http_status(204)
     end
   end
 

@@ -27,8 +27,9 @@ class PlantsController < ApplicationController
   end
 
   def create
+    binding.pry
     @plant = Plant.new(plant_params)
-    #binding.pry
+
     current_user.plants.create(plant_params)
     
   end

@@ -56,16 +56,24 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "PATCH /users/:id" do
+    subject { patch(user_path(user.id) ,params: params) }
+    let(:params) {{ user: { nickname: Faker::Name.name, created_at: Time.current } }}
+    let(:user){create(:user)}
     it "任意のユーザーのレコードを更新できる" do
-      get users_path
-      expect(response).to have_http_status(200)
+     
+      expect { subject }.to change { User.find(user.id).nickname }.from(user.nickname).to(params[:user][:nickname]) &
+                          not_change { User.find(user.id).email } &
+                          not_change { User.find(user.id).created_at }
+      expect(response).to have_http_status(204)
     end
   end
 
   describe "DELETE /users/:id" do
+    subject { delete(user_path(user.id)) }
+    let!(:user) { create(:user) }
     it "任意のユーザーのレコードを削除できる" do
-      get users_path
-      expect(response).to have_http_status(200)
+      expect { subject }.to change {User.count}.by(-1)
+      expect(response).to have_http_status(204)
     end
   end
 end

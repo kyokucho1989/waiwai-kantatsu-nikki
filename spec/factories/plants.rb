@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :plant do
-    plant_name { Faker::Name.middle_name }
     user
+    plant_name { Faker::Name.middle_name }
+
   end
 end

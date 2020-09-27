@@ -3,11 +3,8 @@ FactoryBot.define do
     sequence(:email) {|n| "#{n}_#{Faker::Internet.email}"}
     nickname { Faker::Internet.username }
     password {'password'}
-    # plant
-    # trait :with_plant do
-    #   association :plant, factory: :plant
-    #   # plant
-    # end
-
+    trait :with_plant do
+      plants{[FactoryBot.build(:plant, user: nil)]}
+    end
   end
 end

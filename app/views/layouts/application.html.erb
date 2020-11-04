@@ -11,10 +11,10 @@
 
   <body>
   <!-- ここから -->
-  <!--
+  <%= javascript_pack_tag 'custom_vue' %>
   <%= javascript_pack_tag 'hello_vue' %>
-  <%= stylesheet_pack_tag 'hello_vue'  %>
-  -->
+  <%= stylesheet_pack_tag 'hello_vue'  %> 
+  
   <%= link_to "ユーザー一覧", users_path %>
     <% if user_signed_in? %>
       <%= link_to 'マイページへ', user_path(current_user.id) %>
@@ -24,15 +24,14 @@
       <%= link_to "新規登録", new_user_registration_path %>
     <% end %>
 
-    <div id="app">
+    <div id="hello">
       <p>{{ message }}</p>
     </div>
+    <div id="hello2">
+    <p>{{ message }}</p>
+  </div>
 
     <!-- ここまで -->
     <%= yield %>
-    <! -- vue js 導入-->
-    <script src = "https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src = "https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script src = "main.js"></script>
   </body>
 </html>

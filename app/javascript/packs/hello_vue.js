@@ -26,6 +26,14 @@
 // Add <%= javascript_pack_tag 'hello_vue' %> to your layout
 // Then add this markup to your html template:
 //
+
+//  上部のコードはコンパイラなしでVueをつかう場合に用いる。こいつは既存のhtmlテンプレートに
+// 対してあんたがVueをいじれないときに使用するものだ。そう、これはいつでもシングルコンポーネントのあれだ。
+
+// 既存のhtmlになにかしらのコードをほにゃららしたい場合はしたのコードをコメントアウトしよう。
+// そしてhtmlに <%= javascript_pack_tag 'hello_vue' %> を使いするんだ。
+// あとは以下のdivタグを埋め込んでくれ。
+
 // <div id='hello'>
 //   {{message}}
 //   <app></app>

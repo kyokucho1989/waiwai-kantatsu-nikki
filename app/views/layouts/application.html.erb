@@ -11,7 +11,6 @@
 
   <body>
   <!-- ここから -->
-  <%= javascript_pack_tag 'custom_vue' %>
   <%= javascript_pack_tag 'hello_vue' %>
   <%= stylesheet_pack_tag 'hello_vue'  %> 
   
@@ -23,14 +22,10 @@
       <%= link_to "ログイン", new_user_session_path %>
       <%= link_to "新規登録", new_user_registration_path %>
     <% end %>
-
     <div id="hello">
-      <p>{{ message }}</p>
+      {{message}}
+      <app></app>
     </div>
-    <div id="hello2">
-      <p>{{ message }}</p>
-    </div>
-
     <!-- ここまで -->
     <%= yield %>
   </body>

@@ -1,6 +1,8 @@
 // 自分でvue.jsをカスタマイズしてみる
 
-import Vue from 'vue/dist/vue.esm'
+import Vue from 'vue'
+import Vuetify from "vuetify"; // 追加
+import "vuetify/dist/vuetify.min.css"; // 追加
 import App from '../app.vue'
 
 document.addEventListener('DOMContentLoaded', () => {

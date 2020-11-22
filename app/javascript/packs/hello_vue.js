@@ -45,12 +45,20 @@ import Vue from 'vue'
 import Vuetify from "vuetify"; // 追加
 import "vuetify/dist/vuetify.min.css"; // 追加
 import App from '../app.vue'
-import Footer from '../footter.vue'
+import AppA from '../footter.vue'
 
 Vue.use(Vuetify); // 追加
 const vuetify = new Vuetify(); // 追加
 
 document.addEventListener('DOMContentLoaded', () => {
+  const app2 = new Vue({
+    vuetify, // 追加
+    el: '#hello2',
+    data: {
+      message: "Can you"
+    },
+    components: { AppA }
+  })
   const app = new Vue({
     vuetify, // 追加
     el: '#hello',
@@ -59,14 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     components: { App }
   })
-  const app2 = new Vue({
-    vuetify, // 追加
-    el: '#hello2',
-    data: {
-      message: "Can you"
-    },
-    components: { Footer }
-  })
+
 })
 //
 //

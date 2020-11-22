@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app2"> <!-- 追加 -->
+  <v-app id="app"> <!-- 追加 -->
     <v-btn>フッター</v-btn> <!-- 追加 -->
     <div>  <!-- 更新 -->
       <p>{{ message }}</p>

@@ -1,9 +1,8 @@
 <template>
   <v-app id="app"> <!-- 追加 -->
     <v-btn>Vuetifyのボタン</v-btn> <!-- 追加 -->
-    <div>  <!-- 更新 -->
-      <p>{{ message }}</p>
-    </div>
+    <slot>なし</slot>
+    <p>{{ message }}</p>
   </v-app> <!-- 追加 -->
 </template>
 

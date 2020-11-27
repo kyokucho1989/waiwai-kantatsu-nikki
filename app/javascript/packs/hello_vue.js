@@ -45,27 +45,40 @@ import Vue from 'vue'
 import Vuetify from "vuetify"; // 追加
 import "vuetify/dist/vuetify.min.css"; // 追加
 import App from '../app.vue'
-import AppA from '../footter.vue'
 
 Vue.use(Vuetify); // 追加
 const vuetify = new Vuetify(); // 追加
 
 document.addEventListener('DOMContentLoaded', () => {
-  const app2 = new Vue({
-    vuetify, // 追加
-    el: '#hello2',
-    data: {
-      message: "Can you"
-    },
-    components: { AppA }
-  })
+
   const app = new Vue({
     vuetify, // 追加
     el: '#hello',
     data: {
       message: "Can you say hello?"
     },
-    components: { App }
+    components: { App },
+    created: function(){
+      console.log('created')
+    },
+    beforeMount: function(){
+      console.log('beforeMount')
+    },
+    mounted: function(){
+      console.log('Mounted')
+    },
+    beforeUpdate: function(){
+      console.log('beforeUpdate')
+    },
+    updated: function(){
+      console.log('Updated')
+    },
+    beforeDestroy: function(){
+      console.log('beforeDestroyed')
+    },
+    destroyed: function(){
+      console.log('destroyed')
+    }
   })
 
 })

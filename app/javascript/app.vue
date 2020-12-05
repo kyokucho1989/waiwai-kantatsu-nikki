@@ -1,9 +1,10 @@
 <template>
-  <v-app id="app"> <!-- 追加 -->
-    <v-btn>Vuetifyのボタン</v-btn> <!-- 追加 -->
-    <slot>なし</slot>
-    <p>{{ message }}</p>
-  </v-app> <!-- 追加 -->
+  <v-main>
+    <v-app id="app"> 
+      <v-btn>Vuetifyのボタン</v-btn> 
+      <slot>なし</slot>
+    </v-app> 
+  </v-main>
 </template>
 
 <script>

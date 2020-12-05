@@ -41,6 +41,7 @@
 
 
 // import Vue from 'vue/dist/vue.esm'
+import TurbolinksAdapter from 'vue-turbolinks' //turbolinkをつかっていたので追加
 import Vue from 'vue'
 import Vuetify from "vuetify"; // 追加
 import "vuetify/dist/vuetify.min.css"; // 追加
@@ -49,39 +50,29 @@ import App from '../app.vue'
 Vue.use(Vuetify); // 追加
 const vuetify = new Vuetify(); // 追加
 
-document.addEventListener('DOMContentLoaded', () => {
-
-  const app = new Vue({
+Vue.use(TurbolinksAdapter)
+document.addEventListener('turbolinks:load', () => {
+    const app = new Vue({
     vuetify, // 追加
-    el: '#hello',
-    data: {
-      message: "Can you say hello?"
-    },
-    components: { App },
-    created: function(){
-      console.log('created')
-    },
-    beforeMount: function(){
-      console.log('beforeMount')
-    },
-    mounted: function(){
-      console.log('Mounted')
-    },
-    beforeUpdate: function(){
-      console.log('beforeUpdate')
-    },
-    updated: function(){
-      console.log('Updated')
-    },
-    beforeDestroy: function(){
-      console.log('beforeDestroyed')
-    },
-    destroyed: function(){
-      console.log('destroyed')
-    }
+      el: '#hello',
+      data: {
+              message: "Can you say hello?"
+            },
+      components: { App }
+    })
   })
 
-})
+// document.addEventListener('DOMContentLoaded', () => {
+
+//   const app = new Vue({
+//     vuetify, // 追加
+//     el: '#hello',
+//     data: {
+//       message: "Can you say hello?"
+//     },
+//     components: { App },
+//   })
+// })
 //
 //
 //
